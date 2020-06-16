@@ -40,7 +40,6 @@ const alternateRicksArray = alternateRicks.split(',');
 const alternateRicksNum = console.log(alternateRicksArray.length);
 // Q1.4
 // How many characters are there in rickSaying (without spaces)?
-const rickSaying = 'wubba lubba dub dub';
 let newRickSaying = rickSaying.split(" ").join("").length;
 console.log(newRickSaying);
 
@@ -52,8 +51,15 @@ console.log(realGrandson);
 // Q1.5
 // Decode and console. the secret!
 // To do so, you will need to remove all of the notCode words.
-const decode = secret.replace('summer','').replace('bacon','').replace('scary','').replace('intergalactic','').replace('jerry','').replace('morty','').replace('beth','').replace('family','');
-console.log(decode);
+// const decode = secret.replace('summer','').replace('bacon','').replace('scary','').replace('intergalactic','').replace('jerry','').replace('morty','').replace('beth','').replace('family','');
+let newSecret = secret;
+function decode(str){
+  for(let i=0;i<notCode.length;i++){
+    str =  str.replace(notCode[i],'');
+  }
+  return str;
+}
+console.log(decode(newSecret));
 // Q1.6 (Stretch Goal)
 // Scary Terry is actually not an enemy. Remove him from the list and console only Rick's true enemies.
 const trueEnemies = enemies.replace(' Scary Terry,', '');

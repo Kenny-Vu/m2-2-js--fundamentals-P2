@@ -9,6 +9,16 @@
 // and returns a number that indicates how many uppercase “B”
 // characters there are in the string.
 
-function countBs(str) {}
+function countBs(str) {
+    let uppercaseNum = null;
+    for (index=0;index<str.length;index++) {
+        if(str[index].includes('B')){
+            uppercaseNum ++;
+        }
+    }
+    return uppercaseNum;
+}
 // -------------------------------------------------------------------------
 console.log('Q1: ', countBs('BananaBabyBubbles'));
+
+
