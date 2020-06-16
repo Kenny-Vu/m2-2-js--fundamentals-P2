@@ -2,7 +2,14 @@
 // Write a function that takes an array and a value as arguments and
 // returns true if the value is in the array else it returns false.
 
-function itemIsPresent(array, item) {}
+function itemIsPresent(array, item) {
+  let isItemThere = array.indexOf(item);
+  if (isItemThere === -1) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 // Test case
 const myArray = [

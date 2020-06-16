@@ -10,6 +10,13 @@
 
 function greetLong(lst) {
   // lst is an array of strings
+  lst.forEach(function(element){
+    let index = lst.indexOf(element);
+    if (lst[index].length > 3) {
+      lst[index] = 'Hello ' + element;
+    }
+  })
+  return lst;
 }
 // -------------------------------------------------------------------------
 console.log('Q7 greetLong()', greetLong(['Scott', 'Bob', 'Ric', 'Jim']));

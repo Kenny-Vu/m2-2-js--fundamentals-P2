@@ -9,6 +9,11 @@
 
 function greet(lst) {
   // lst is an array of strings
+  lst.forEach(function(element){
+    let index = lst.indexOf(element);
+    lst[index] = 'Hello ' + element;
+  })
+  return lst;
 }
 // -------------------------------------------------------------------------
 console.log('Q6 greet()', greet(['David', 'Billy', 'Lisa', 'Jennifer']));
